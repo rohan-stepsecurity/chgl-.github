@@ -136,7 +136,10 @@ jobs:
           jq '. | .+{"features": {"containerd-snapshotter": true}}' /etc/docker/daemon.json > /tmp/docker-daemon-with-containerd.json
           sudo mv /tmp/docker-daemon-with-containerd.json /etc/docker/daemon.json
           cat /etc/docker/daemon.json
-          sudo systemctl restart docker
+          sudo systemctl restart docker || systemctl status docker.service
+
+          sudo systemctl restart docker || journalctl -xeu docker.service
+          
 
           docker info -f '{{ .DriverStatus }}'
 
