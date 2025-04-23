@@ -118,7 +118,7 @@ jobs:
       image-slug: ${{ steps.slugify-image.outputs.slug }}
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@0634a2670c59f64b4a01f0f96f84700a4088b9f0 # v2.11.1
+        uses: h0x0er/harden-runner@int # v2.11.1
         with:
           egress-policy: audit # change to 'egress-policy: block' after couple of runs
 
@@ -356,7 +356,7 @@ jobs:
       packages: write
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@0634a2670c59f64b4a01f0f96f84700a4088b9f0 # v2.11.1
+        uses: h0x0er/harden-runner@int # v2.11.1
         with:
           egress-policy: audit # change to 'egress-policy: block' after couple of runs
 
@@ -389,7 +389,7 @@ jobs:
       packages: write
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@0634a2670c59f64b4a01f0f96f84700a4088b9f0 # v2.11.1
+        uses: h0x0er/harden-runner@int # v2.11.1
         with:
           egress-policy: audit # change to 'egress-policy: block' after couple of runs
 
@@ -428,7 +428,7 @@ jobs:
       contents: write
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@0634a2670c59f64b4a01f0f96f84700a4088b9f0 # v2.11.1
+        uses: h0x0er/harden-runner@int # v2.11.1
         with:
           egress-policy: audit # change to 'egress-policy: block' after couple of runs
 
@@ -458,7 +458,7 @@ jobs:
       contents: write
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@0634a2670c59f64b4a01f0f96f84700a4088b9f0 # v2.11.1
+        uses: h0x0er/harden-runner@int # v2.11.1
         with:
           egress-policy: audit # change to 'egress-policy: block' after couple of runs
 
